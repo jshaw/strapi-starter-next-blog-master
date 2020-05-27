@@ -1,0 +1,17 @@
+{
+  "builds": [{ "src": "frontend/package.json", "use": "@now/next" }],
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_API_URL": "@next-public-api-url"
+    }
+  },
+  "env": {
+    "NEXT_PUBLIC_API_URL": "@next-public-api-url"
+  },
+  "routes": [
+    {
+      "src": "(.*)",
+      "dest": "frontend$1"
+    }
+  ]
+}
